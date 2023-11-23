@@ -6,7 +6,13 @@ export const App = {
     window.self = this
     return h('div', {
       id: "root",
-      class: ['red', 'hard']
+      class: ['red', 'hard'],
+      onClick() {
+        console.log('click')
+      },
+      onMousedown() {
+        console.log('onMousedown')
+      }
     },
       'hi ' + this.msg,
       // [
@@ -18,7 +24,7 @@ export const App = {
   setup() {
 
     return {
-      msg: 'Hello, World! 1'
+      msg: 'mini-vue-haha'
     }
   }
 }
